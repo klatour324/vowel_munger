@@ -1,9 +1,9 @@
 class VowelMunger
+  VOWELS = 'aeiou'
 
   def vowel_munger(string)
-    vowels = string.gsub(/[aeiou]/i)
     string.each_char.with_index(1).map do |char, index|
-      if vowels.include?(char)
+      if VOWELS.include?(char.downcase)
         index.to_s
       else
         char
